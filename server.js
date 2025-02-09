@@ -3,9 +3,9 @@ const cors = require("cors");
 
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults({
-  static: "./public"
-});
+
+
+const middlewares = jsonServer.defaults({ noStatic: true });
 
 server.use(cors());
 server.use(middlewares);
