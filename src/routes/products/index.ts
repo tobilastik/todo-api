@@ -1,13 +1,16 @@
 
 import  {Router} from 'express'
 import { createProduct, deleteProduct, getProductById, listProduct, updateProduct } from './productController'
+import { validateData } from '../../middleware/validationMiddleware'
+import { createProductSchema, updateProductSchema } from '../../db/productSchema';
+
 
 const router = Router()
 
 router.get('/', listProduct)
 router.get('/:id', getProductById)
-router.post('/', createProduct)
-router.put('/:id', updateProduct)
+router.post('/', validateData(createProductSchema), createProduct)
+router.put('/:id', validateData(updateProductSchema), updateProduct)
 router.delete('/:id', deleteProduct)
 
 
