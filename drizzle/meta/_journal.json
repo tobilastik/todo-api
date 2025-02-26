@@ -8,6 +8,13 @@
       "when": 1740556671507,
       "tag": "0000_quick_yellow_claw",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1740556784509,
+      "tag": "0001_slim_scorpion",
+      "breakpoints": true
     }
   ]
 }
